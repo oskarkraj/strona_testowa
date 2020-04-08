@@ -2,10 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: darkgray;
+    background-color: #08121C;
+    color: aliceblue;
 }
 header {
     display: flex;
@@ -15,54 +24,72 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background-color: rgba(0, 0, 0, 0.521);
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(8,18,28,1) 100%);
+    z-index: 2;
 }
 .logo {
     cursor: pointer;
+    transition: .3s;
+}
+.logo:hover {
+    transform: rotate(5deg);
+    transition: .3s;
 }
 ul {
     list-style-type: none;
 }
+.navi:hover li a {
+    filter: blur(3px);
+    transform: .2s;
+}
 li {
     display: inline-block;
     padding: 0 30px;
+    transition: .3s;
+}
+li:hover {
+    transform: scale(1.3);
 }
 a {
     text-decoration: none;
     letter-spacing: .3em;
     text-shadow: 1px 0px 0px #000;
 }
+.navi li a:hover {
+    filter: blur(0);
+    color: #fff;
+}
 li::before {
     content: "| ";
 }
 nav li a {
     transition: all .3s ease 0s;
-    color: aliceblue;
-    
-}
-nav li a:hover {
     color: red;
 }
 .parallax-1 {
-    background-image: url("images/sett-sj-bMLrGNqGhwY-unsplash.jpg");
+    /* background-image: url("images/sett-sj-bMLrGNqGhwY-unsplash.jpg"); */
+    background-image: url("http://unsplash.it/1920/900");
     min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
-.container-1, .container-2 {
+.container-1, .container-2, .container-3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     height: auto;
+    min-height: 200px;
     align-items: space-between;
     grid-template-columns: 300px 300px;
     grid-template-rows: 150px;
 }
 .parallax-2 {
-    background-image: url("http://unsplash.it/1920/900");
+    background-image: url("http://unsplash.it/1920/920");
     min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
@@ -70,9 +97,192 @@ nav li a:hover {
     background-size: cover;
 }
 .catalogue-container {
-    background-color: azure;
+    position: relative;
     height: 100px;
     width: 100px;
-    margin: 30px;
+    margin: 40px;
     text-align: center;
+    border-radius: 50%;
+    transition: all .3s ease 0s;
+    border: 2px solid red;
 }
+.catalogue-container p {
+    color: red;
+    position: relative;
+    top: 60px;
+}
+.catalog-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 25px;
+}
+.catalog-icon-x {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 18px;
+}
+.motto {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.438);
+    top: 250px;
+    left: 15%;
+}
+.motto p {
+    font-size: 36px;
+    color: red;
+}
+.parallax-3 {
+    background-image: url("http://unsplash.it/1920/910");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.catalogue-container:hover {
+    background-color:red;
+    border-radius: 45%;
+    transition: all .3s ease 0s;
+  }
+.container-left {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 30px;
+  }
+.triangle-top {
+    position: absolute;
+    background-image: url("http://unsplash.it/450/450");
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+}
+.triangle-bottom {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url("http://unsplash.it/450/449");
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.container-right {
+    background-color: rgba(0, 0, 0, 0.459);
+    right: 50%;
+    text-align: left;
+    width: 450px;
+    height: 450px;
+    margin: 30px;
+  }
+.container-left2 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    margin: 30px;
+  }
+.container-right2 {
+    background-color: rgba(0, 0, 0, 0.459);
+    right: 50%;
+    text-align: left;
+    width: 450px;
+    height: 450px;
+    margin: 30px;
+  }
+.line-rotate-45 {
+    background-color: #fff;
+    height: 2px;
+    width: 600px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    transform: rotate(45deg);
+}
+.line-rotate-45::after {
+    content: '';
+    background-color: #fff;
+    display: block;
+    height: 2px;
+    width: 600px;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+}
+.x-link-top, .x-link-right, .x-link-bottom, .x-link-left {
+    position: absolute;
+    border: 2px solid red;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    border-radius: 50%;
+    transition: .3s;
+}
+.x-link-top {
+    top: 40px;
+}
+.x-link-top:hover, .x-link-right:hover,
+.x-link-bottom:hover, .x-link-left:hover {
+    border: 4px solid red;
+    transition: all .3s ease 0s;
+}
+.x-link-right {
+    top: 40%;
+    right: 40px;
+}
+.x-link-left {
+    top: 40%;
+    left: 40px;
+}
+.x-link-bottom {
+    bottom: 40px;
+}
+footer {
+    background-color: #000;
+    display: flex;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    min-height: 200px;
+}
+.flip-it {
+    font-size: 80px;
+    width: 140px;
+}
+.flip-it:hover {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 1s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+/* WebKit and Opera browsers */
+@-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
