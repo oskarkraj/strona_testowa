@@ -38,6 +38,10 @@ body {
     background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(8,18,28,1) 100%);
     z-index: 2;
 }
+.shrink {
+    padding: 80px 0;
+    background-color: #306e6e;
+  }
 .logo {
     cursor: pointer;
     transition: .3s;

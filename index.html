@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+      let navi = document.querySelector("header");
+          let position = 0;
+          
+          window.addEventListener('scroll', function(){
+            if(position < window.pageYOffset) {
+              navi.classList.toggle("shrink");
+          } else {
+              navi.classList.toggle("header");
+          }
+          })
+    </script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200;1,700;1,900&display=swap" rel="stylesheet">
     <title>NEOS</title>
@@ -122,17 +134,17 @@
             CONTACT // MAIL FORM // RODO 
         </footer>
         
-        <script>
-          window.onscroll = function() {scrollFunction()};
+        <!-- <script>
+          // window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.querySelector("header").style.fontSize = "30px";
-  } else {
-    document.querySelector("header").style.fontSize = "80px";
-  }
-}
+          // function scrollFunction() {
+          //   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          //     document.getElementById("header").style.background-color = "#fff";
+          //   } else {
+          //     document.getElementById("header").style.background-color = "#000";
+          //   }
+          // }
 
-
-        </script>
+          
+        </script> -->
   </body>
