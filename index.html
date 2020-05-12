@@ -3,18 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script>
-      let navi = document.querySelector("header");
-          let position = 0;
-          
-          window.addEventListener('scroll', function(){
-            if(position < window.pageYOffset) {
-              navi.classList.toggle("shrink");
-          } else {
-              navi.classList.toggle("header");
-          }
-          })
-    </script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200;1,700;1,900&display=swap" rel="stylesheet">
     <title>NEOS</title>
@@ -23,7 +11,7 @@
     <div id="one" class="parallax-1">
       <img class="motto" src="images/motto.png" alt="motto" >
     </div>
-      <div id="header">
+      <header>
         <a href="index.html"><img class="logo" src="images/logo.png" alt="logo" ></a>
             <nav>
                 <ul class="navi">
@@ -33,7 +21,7 @@
                     <li><a href="#four">KONTAKT</a></li>
                 </ul>
             </nav>
-          </div>
+      </header>
         <div class="container-1">
           <div class="cont__horizontal"><p id="date">1994 -> 2020</p></div>
           <div class="cont__left"><p>Agencja reklamowa NEOS
@@ -129,22 +117,27 @@
           </div>
       </div>
 
-
         <footer>
             CONTACT // MAIL FORM // RODO 
         </footer>
-        
-        <!-- <script>
-          // window.onscroll = function() {scrollFunction()};
 
-          // function scrollFunction() {
-          //   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-          //     document.getElementById("header").style.background-color = "#fff";
-          //   } else {
-          //     document.getElementById("header").style.background-color = "#000";
-          //   }
-          // }
+        <script>
+          document.body.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            console.log('scrolled');
 
-          
-        </script> -->
+            const header = document.querySelector('header');
+            console.log(header);
+            
+
+            if (scrolled > 30){
+                  header.classList.add('.sticky');
+              }
+            else {
+                  header.classList.remove('.sticky');
+              }
+         
+          console.log('header class', header.classList) 
+        });
+        </script>
   </body>
