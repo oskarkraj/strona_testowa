@@ -122,22 +122,21 @@
         </footer>
 
         <script>
-          document.body.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            console.log('scrolled');
+          document.body.addEventListener('scroll', (ev) => {
+            const scrolled = ev.target.scrollTop;
+            const header = document.querySelector('header');   
 
-            const header = document.querySelector('header');
-            console.log(header);
-            
+            console.log('scrolled', scrolled) 
 
             if (scrolled > 30){
-                  header.classList.add('.sticky');
+                console.log('scrolled');
+                  header.classList.add('sticky');
               }
             else {
-                  header.classList.remove('.sticky');
+                  header.classList.remove('sticky');
               }
          
-          console.log('header class', header.classList) 
+          console.log('BEFORE -- header class', header.classList) 
         });
         </script>
   </body>
