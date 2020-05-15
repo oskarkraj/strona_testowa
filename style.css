@@ -37,10 +37,11 @@ header {
     background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(8,18,28,1) 100%);
     z-index: 2;
+    transition: all .3s ease-in-out;
 }
 .sticky {
-    background-color: #306e6e;
-    color: #008000;
+    padding: 10px 10%;
+    background-color: #08121C;
 }
 .logo {
     cursor: pointer;
@@ -59,7 +60,7 @@ ul {
 }
 li {
     display: inline-block;
-    padding: 0 30px;
+    padding: 0 20px;
     transition: .3s;
 }
 li:hover {
@@ -112,10 +113,7 @@ nav li a {
     grid-template-columns: 300px 300px;
     grid-template-rows: 150px;
 }
-.container-2 {
-    max-width: 1800px;
-    margin: 0 auto;
-}
+
 .motto {
     position: absolute;
     background-color:#08121C;
@@ -123,7 +121,6 @@ nav li a {
     left: 50%;
     transform: translateX(-50%);
     padding: 20px;
-
 }
 #date {
     position: relative;
@@ -137,7 +134,7 @@ nav li a {
     height: auto;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .offer-box::after {
     content: '';
@@ -150,6 +147,7 @@ nav li a {
 .offer-text-box {
     width: 500px;
     height: auto;
+    margin-bottom: 10px;
 }
 .offer-img {
     display: block;
@@ -175,10 +173,9 @@ h2::after {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 25px;
-    align-items: center;
-    justify-items: center;
+    align-items: flex-start;
     width: 500px;
-    height: auto;
+    height: 500px;
 }
 .catalogue-icon {
     width: 150px;
@@ -208,10 +205,6 @@ h2::after {
     -moz-box-shadow: 0px 2px 25px 5px rgba(0,0,0,5);
     box-shadow: 0px 2px 25px 5px rgba(0,0,0,5);
     filter: opacity(1);
-}
-.history {
-    font-size: 52px;
-    text-align: center;
 }
 .cont__horizontal {
     display: flex;
@@ -264,5 +257,19 @@ footer {
     }
     #date {
         font-size: 1em;
+    }
+    .offer-icons-box {
+        width: 350px;
+    }
+    .catalogue-icon {
+        width: 100px;
+        height: 100px;
+    }
+    .offer-icons-box {
+        height: auto;
+    }
+    .gallery {
+        column-count: 3;
+        column-gap: .6em;
     }
 }
